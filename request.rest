@@ -1,0 +1,27 @@
+GET http://localhost:2000/api/users/get-users
+Content-Type: application/json
+Authorization: Brearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJfaWQiOjEsImlhdCI6MTYwNTk1MTMwOCwiZXhwIjoxNjA1OTUzMTA4fQ.NOgO1oHqvUepmdbECq11oBITsb486EuSTXPYpiSoRSg
+
+###
+
+GET http://localhost:2000/api/
+
+
+###
+
+POST http://localhost:2000/api/users/auth
+Content-Type: application/json
+
+{
+  "username": "super",
+  "password": "admin@123"
+}
+
+###
+
+POST http://localhost:2000/api/users/token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJfaWQiOjEsImlhdCI6MTYwNTk1MTI0NH0.bw3APXjFSWC88KbwnnDUGNILrTYzWHI_U86M4KJ8WII"
+}
