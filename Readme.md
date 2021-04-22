@@ -6,10 +6,10 @@ npm i
 create a .env file
 PORT=<Your Post Number> Default 2000
 HOST=<Your Database Host> Default localhost
-DATABASE=<Your Database Name> Default node_api
+DATABASE=<Your Database Name> Default node*api
 USER_NAME=<Your Database Username> Default root
 PASSWORD=<Your Database Username> Default ""
-DATABASE_PREFIX=<Your Database Prefix> Default "api_"
+DATABASE_PREFIX=<Your Database Prefix> Default "api*"
 ACCESS_TOKEN_SECRET=<Your Token Secret> Use Crypto to Generate Secret
 REFRESH_TOKEN_SECRET=<Your Refresh Token Secret> Use Crypto to Generate Secret
 
