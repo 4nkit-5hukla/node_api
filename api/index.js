@@ -1,4 +1,3 @@
-const db = require('../config/database')
 const { usersGetRequest, usersPostRequest } = require('./users')
 const { verifyToken } = require('../model/users')
 
@@ -26,7 +25,7 @@ module.exports = {
     const { module } = req.params
     switch (module) {
       case 'users':
-        usersGetRequest(req, res, db)
+        usersGetRequest(req, res)
         break
     }
   },
@@ -34,7 +33,7 @@ module.exports = {
     const { module } = req.params
     switch (module) {
       case 'users':
-        usersPostRequest(req, res, db)
+        usersPostRequest(req, res)
         break
     }
   },

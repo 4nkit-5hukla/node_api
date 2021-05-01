@@ -1,27 +1,27 @@
-const { getUsers } = require('./users')
+const { getUsers, getUser } = require('./users')
 const { authUser } = require('./auth')
 const { generateNewToken } = require('./token')
-const toUFC = string => {
-  return `${string.charAt(0).toUpperCase()}${string.slice(1)}`
-}
 
 module.exports = {
-  usersGetRequest: (req, res, db) => {
+  usersGetRequest: (req, res) => {
     const { service } = req.params
     switch (service) {
       case 'get-users':
-        getUsers(req, res, db)
+        getUsers(req, res)
+        break
+      case 'get-user':
+        getUser(req, res)
         break
     }
   },
-  usersPostRequest: (req, res, db) => {
+  usersPostRequest: (req, res) => {
     const { service } = req.params
     switch (service) {
       case 'auth':
-        authUser(req, res, db)
+        authUser(req, res)
         break
       case 'token':
-        generateNewToken(req, res, db)
+        generateNewToken(req, res)
         break
     }
   },

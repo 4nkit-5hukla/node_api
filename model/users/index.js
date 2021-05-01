@@ -34,10 +34,10 @@ const membersTable = `${process.env.DATABASE_PREFIX}members`,
     })
   }
 module.exports = {
-  membersTable: membersTable,
-  tokensTable: tokensTable,
-  generateToken: generateToken,
-  verifyToken: verifyToken,
-  generateRefreshToken: generateRefreshToken,
-  verifyRefreshToken: verifyRefreshToken,
+  membersTable,
+  tokensTable,
+  generateToken,
+  verifyToken,
+  generateRefreshToken,
+  verifyRefreshToken,
 }
